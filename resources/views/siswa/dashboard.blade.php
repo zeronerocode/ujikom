@@ -135,7 +135,7 @@
                             </div>
                             <div class="col-auto">
                                 <h6 class="text-muted m-b-10">Jumlah Siswa</h6>
-                                <h2 class="m-b-0">45</h2>
+                                <h2 class="m-b-0">{{$total}}</h2>
                             </div>
                         </div>
                     </div>
@@ -150,7 +150,7 @@
                             </div>
                             <div class="col-auto">
                                 <h6 class="text-muted m-b-10">Siswa Lulus</h6>
-                                <h2 class="m-b-0">45</h2>
+                                <h2 class="m-b-0">{{$lulus}}</h2>
                             </div>
                         </div>
                     </div>
@@ -165,7 +165,7 @@
                             </div>
                             <div class="col-auto">
                                 <h6 class="text-muted m-b-10">Siswa Tidak Lulus</h6>
-                                <h2 class="m-b-0">45</h2>
+                                <h2 class="m-b-0">{{$tidak}}</h2>
                             </div>
                         </div>
                     </div>

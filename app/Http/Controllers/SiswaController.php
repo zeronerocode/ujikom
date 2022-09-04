@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use DB;
 
 class SiswaController extends Controller
 {
@@ -38,7 +39,10 @@ class SiswaController extends Controller
     public function dashboard()
     {
         $siswas = User::oldest()->paginate(20);
-        return view('siswa.dashboard', compact('siswas'));
+        $total = User::count();
+        $lulus = DB::table('users')->where('status','=','Lulus')->get()->count();
+        $tidak = DB::table('users')->where('status','=','Tidak Lulus')->get()->count();
+        return view('siswa.dashboard', compact('siswas','total','lulus','tidak'));
     }
 
     public function editSiswa(User $siswa)
