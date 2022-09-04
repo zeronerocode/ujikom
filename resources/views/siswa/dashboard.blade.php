@@ -53,6 +53,9 @@
 					<li class="nav-item pcoded-hasmenu">
 						<a href="{{ route('dashboard.siswa') }}" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
 					</li>
+                    <li class="nav-item pcoded-hasmenu">
+						<a href="{{route('profile')}}" class="nav-link "><span class="pcoded-micon"><i class="feather icon-user"></i></span><span class="pcoded-mtext">Profile</span></a>
+					</li>
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
                         <li class="nav-item pcoded-hasmenu">
