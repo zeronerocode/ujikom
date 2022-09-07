@@ -38,6 +38,7 @@ class RegisteredUserController extends Controller
             'nik' => ['required', 'string', 'max:255', 'unique:users'],
             'email' => ['required', 'string', 'max:255', 'unique:users'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'jurusan' => ['string'],
         ]);
 
         $user = User::create([
@@ -45,6 +46,7 @@ class RegisteredUserController extends Controller
             'nik' => $request->nik,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'jurusan'=>$request->jurusan
         ]);
 
         event(new Registered($user));

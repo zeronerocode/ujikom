@@ -175,12 +175,26 @@
 						</div>
 					</div>
 				</div>
+                @if($profile->status === 'Lulus')
+                <div class="col-md-12 text-center mb-1 bg-c-green order-md-2">
+                    <h1 class="text-white mb-2">Anda Kompeten</h1>
+                </div>
+                @endif
+                @if ($profile->status === 'Tidak Lulus')
+                <div class="col-md-12 text-center mb-1 bg-c-red order-md-2">
+                    <h1 class="text-white mb-2">Anda Belum Kompeten</h1>
+                </div>
+                @endif
 			</div>
 		</div>
 		<!-- profile header end -->
 
 		<!-- profile body start -->
+        <div class="row">
+
+        </div>
 		<div class="row">
+
 			<div class="col-md-12 order-md-2">
 						<div class="card">
 							<div class="card-body d-flex align-items-center justify-content-between">

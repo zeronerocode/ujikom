@@ -30,7 +30,9 @@ class SiswaController extends Controller
             'hp' => $request->hp,
             'tempat_lahir' => $request->tempat_lahir,
             'tanggal_lahir' => $request->tanggal_lahir,
-            'alamat'=>$request->alamat
+            'alamat'=>$request->alamat,
+            'jurusan' => $request->jurusan,
+            'skema'=>$request->skema
         ]);
 
         return redirect()->route('profile');
@@ -61,7 +63,9 @@ class SiswaController extends Controller
             'tempat_lahir' => $request->tempat_lahir,
             'tanggal_lahir' => $request->tanggal_lahir,
             'alamat'=>$request->alamat,
-            'penguji' =>$request->penguji
+            'penguji'=>$request->penguji,
+            'jurusan'=>$request->jurusan,
+            'skema' => $request->skema
         ]);
 
         return redirect()->route('dashboard.siswa');

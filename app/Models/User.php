@@ -28,7 +28,9 @@ class User extends Authenticatable
         'hp',
         'password',
         'status',
-        'penguji'
+        'penguji',
+        'jurusan',
+        'skema'
     ];
 
     /**

@@ -232,6 +232,32 @@
 											<textarea class="form-control" name="alamat">{{$profile->alamat}}</textarea>
 										</div>
 									</div>
+                                    <div class="form-group row align-items-center">
+                                        <label for="skema" class="col-sm-3 col-form-label font-weight-bolder">Jurusan</label>
+                                        <div class="col-md-9">
+                                            <select class="js-example-basic-single form-control" name="jurusan">
+                                                <option value="{{$profile->jurusan}}">Jurusan</option>
+                                                <option value="Teknik Kimia industri">1. Teknik Kimia industri</option>
+                                                <option value="Analis Pengujian Laboratorium">2. Analis Pengujian Laboratorium</option>
+                                                <option value="Teknik Mekanik Industri">3. Teknik Mekanik Industri</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row align-items-center">
+                                        <label for="skema" class="col-sm-3 col-form-label font-weight-bolder">Skema Uji</label>
+                                        <div class="col-md-9">
+                                            <select class="js-example-basic-single form-control" name="skema">
+                                                <option value="{{$profile->skema}}">Skema Uji</option>
+                                                <option value="Pengoperasian Peralatan HE">1. Pengoperasian Peralatan HE</option>
+                                                <option value="Pengoperasian Refining">2. Pengoperasian Refining</option>
+                                                <option value="Pengoperasian Fraksionasi">3. Pengoperasian Fraksionasi</option>
+                                                <option value="Pengoperasian Esterifikasi">4. Pengoperasian Esterifikasi</option>
+                                                <option value="KKNI Level II pada Kompetensi Keahlian Kimia Industri">6. KKNI Level II pada Kompetensi Keahlian Kimia Industri</option>
+                                                <option value="KKNI Level II pada Kompetensi Keahlian Analis Pengujian Laboratorium">6. KKNI Level II pada Kompetensi Keahlian Analis Pengujian Laboratorium</option>
+                                                <option value="KKNI Level II pada Kompetensi Keahlian Teknik Mekanik Industri">7. KKNI Level II pada Kompetensi Keahlian Teknik Mekanik Industri</option>
+                                            </select>
+                                        </div>
+                                    </div>
 									<div class="form-group row align-items-center mt-2">
 										<label class="col-sm-3 col-form-label"></label>
 										<div class="col-sm-9">

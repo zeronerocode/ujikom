@@ -44,6 +44,14 @@
                                 <input type="text" class="form-control" name="email" id="email" placeholder="">
                             </div>
                             <div class="form-group mb-4">
+                                <select class="js-example-basic-single form-control">
+                                    <option value="">Jurusan</option>
+                                    <option value="Teknik Kimia industri">1. Teknik Kimia industri</option>
+                                    <option value="Analis Pengujian Laboratorium">2. Analis Pengujian Laboratorium</option>
+                                    <option value="Teknik Mekanik Industri">3. Teknik Mekanik Industri</option>
+                                </select>
+                            </div>
+                            <div class="form-group mb-4">
                                 <label class="floating-label" for="Password">Password</label>
                                 <input type="password" class="form-control" name="password" id="Password" placeholder="">
                             </div>

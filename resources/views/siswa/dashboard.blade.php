@@ -137,7 +137,7 @@
                                 <i class="fas fa-user-graduate f-36 text-c-purple"></i>
                             </div>
                             <div class="col-auto">
-                                <h6 class="text-muted m-b-10">Jumlah Siswa</h6>
+                                <h6 class="text-muted m-b-10">Jumlah Asesi</h6>
                                 <h2 class="m-b-0">{{$total}}</h2>
                             </div>
                         </div>
@@ -152,7 +152,7 @@
                                 <i class="fas fa-check-square f-36 text-c-green"></i>
                             </div>
                             <div class="col-auto">
-                                <h6 class="text-muted m-b-10">Siswa Lulus</h6>
+                                <h6 class="text-muted m-b-10">Asesi Kompeten</h6>
                                 <h2 class="m-b-0">{{$lulus}}</h2>
                             </div>
                         </div>
@@ -167,7 +167,7 @@
                                 <i class="fas fa-times-circle f-36 text-c-red"></i>
                             </div>
                             <div class="col-auto">
-                                <h6 class="text-muted m-b-10">Siswa Tidak Lulus</h6>
+                                <h6 class="text-muted m-b-10">Asesi Belum Kompeten</h6>
                                 <h2 class="m-b-0">{{$tidak}}</h2>
                             </div>
                         </div>
@@ -205,7 +205,9 @@
                                         <th>Jenis Kelamin</th>
                                         <th>Tanggal Lahir</th>
                                         <th>Alamat</th>
-                                        <th>Penguji</th>
+                                        <th>Asesor</th>
+                                        <th>Jurusan</th>
+                                        <th>Skema Uji</th>
                                         <th>Options</th>
                                     </tr>
                                 </thead>
@@ -220,23 +222,25 @@
                                         <td>{{$siswa->tanggal_lahir}}</td>
                                         <td>{{$siswa->alamat}}</td>
                                         <td>{{$siswa->penguji}}</td>
+                                        <td>{{$siswa->jurusan}}</td>
+                                        <td> {{$siswa->skema}} </td>
                                         <td>
                                             @if($siswa->status === "Lulus")
-                                                <button type="submit" class="btn btn-info btn-sm">Lulus</button>
+                                                <button type="submit" class="btn btn-info btn-sm">Kompeten</button>
                                             @elseif($siswa->status === "Tidak Lulus")
-                                                <button type="submit" class="btn btn-danger btn-sm"> Tidak Lulus</button>
+                                                <button type="submit" class="btn btn-danger btn-sm">Belum Kompeten</button>
                                             @else
 
                                             <a href="{{ route('siswa.edit', $siswa->id) }}" class="btn btn-success btn-sm">Edit</a>
                                             <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('lulus', $siswa->id) }}" method="POST">
                                                 @csrf
                                                 @method('PUT')
-                                                <button type="submit" class="btn btn-info btn-sm">Lulus</button>
+                                                <button type="submit" class="btn btn-info btn-sm">Kompeten</button>
                                             </form>
                                             <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('tidaklulus', $siswa->id) }}" method="POST">
                                                 @csrf
                                                 @method('PUT')
-                                                <button type="submit" class="btn btn-danger btn-sm"> Tidak Lulus</button>
+                                                <button type="submit" class="btn btn-danger btn-sm">Belum Kompeten</button>
                                             </form>
                                             @endif
                                         </td>
@@ -360,10 +364,10 @@
                 }
             },
             series: [{
-                name: 'Lulus',
+                name: 'Kompeten',
                 data: [40, 75, 20, 45, 30, 50, 30]
             }, {
-                name: 'Tidak Lulus',
+                name: 'Belum Kompeten',
                 data: [90, 40, 60, 20, 10, 0, 0]
             }],
 
